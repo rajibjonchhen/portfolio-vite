@@ -29,7 +29,7 @@ export default function educationData () {
     },
 
     {
-        title:"Bachelor in Business Studies",
+        title:"Bachelors in Business Studies",
         college:"Bhaktapur Multiple Campus",
         place:"Bhaktapur, Nepal",
         startDate:"06 / 2011",
