@@ -8,7 +8,6 @@ import experienceData from './data/experienceData'
 import { interpersonalSkillsData, itSkillsData } from './data/skillsData'
 import myInfoData from './data/myInfoData'
 import interestsData from './data/interestData'
-import projectsData from './data/projectsData'
 import trainingsData from './data/trainingsData'
 import languagesData from './data/languagesData'
 
@@ -51,11 +50,15 @@ export default defineConfig({
                         myInfo:myInfoData(),
                         educations: educationData(),
                         experiences: experienceData(),
-                        skills:[{it:itSkillsData(), interpersonal:interpersonalSkillsData()}],
-                        interests:interestsData(),
-                        projects:projectsData(),
                         trainingsData:trainingsData(),
-                        languages:languagesData()
+                        othersInfo:[
+                            {title:"Interest",
+                            data:interestsData()},
+                            {title:"Languages",
+                            data:languagesData()},
+                            {title:"Skills",
+                            data:interpersonalSkillsData()},
+                        ]
                     },
                 }
             },
