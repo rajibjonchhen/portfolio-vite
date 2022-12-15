@@ -8,7 +8,7 @@
   </title>
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <!-- <link rel="stylesheet" href="style.css" /> -->
-  <link href="/src/style.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
   <meta name="description" content="<%- head.meta.description %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="<%- head.meta.author %>" />
@@ -20,71 +20,25 @@
   <nav class="bg-gray-800 py-3 fixed w-full top-0 z-50">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button type="button"
-            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <!--
-              Icon when menu is closed.
-  
-              Heroicon name: outline/bars-3
-  
-              Menu open: "hidden", Menu closed: "block"
-            -->
-            <!-- <span>
-              <svg id="open-menu" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </span> -->
-            <!--
-              Icon when menu is open.
-              
-              Heroicon name: outline/x-mark
-              
-              Menu open: "block", Menu closed: "hidden"
-            -->
-            <span>
-              <svg id="close-menu" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </span>
-          </button>
-        </div>
+     
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="text-white px-3 py-2 rounded-md text-lg font-large">
             <%- myInfo.name %>
           </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <!-- <div class="flex space-x-4">
-              <a href="#intro-section" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                aria-current="page">Intro</a>
-
-              <a href="#education-section"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
-
-              <a href="#experience-section"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Experience</a>
-
-              <a href="#contact-section"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-            </div> -->
-          </div>
+          
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button type="button"
-            class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+
+          <a target="_blank" title="send email"
+          href="<%- links.email %>"
+          class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
             <span class="sr-only">View notifications</span>
             <!-- Heroicon name: outline/bell -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            <svg class="w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 18">
+              <path fill="#fff" class="fill-blue-middle"
+                d="M29.333.333H12A2.674 2.674 0 0 0 9.333 3v12A2.667 2.667 0 0 0 12 17.667h17.333A2.657 2.657 0 0 0 32 15V3A2.667 2.667 0 0 0 29.333.333zm0 4.894-8.666 4.44L12 5.227V3l8.667 4.413L29.333 3v2.227zM6.667 15c0 .227.04.44.066.667h-5.4c-.736 0-1.333-.6-1.333-1.333C0 13.6.597 13 1.333 13h5.334v2zM4 2.334h2.733c-.026.226-.066.44-.066.666v2H4c-.733 0-1.333-.6-1.333-1.333S3.267 2.334 4 2.334zM1.333 9c0-.733.6-1.333 1.334-1.333h4v2.667h-4c-.734 0-1.334-.6-1.334-1.334z" />
             </svg>
-          </button>
+          </a>
 
           <!-- Profile dropdown -->
           <div class="relative ml-3">
@@ -102,28 +56,13 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <!-- <div class="hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pt-2 pb-3">
-        <a href="#intro-section"
-          class="mobile-menu-item bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-          aria-current="page">Intro</a>
-
-        <a href="#education-section"
-          class="mobile-menu-item text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Education</a>
-
-        <a href="#experience-section"
-          class="mobile-menu-item text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
-
-        <a href="#contact-section"
-          class="mobile-menu-item text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-      </div>
-    </div> -->
+    
   </nav>
   <!-- nav end -->
 
   <!-- jumbo start -->
-  <section id="intro-section" class="flex flex-wrap mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
-    <div class="relative px-6 lg:px-8">
+  <section id="intro-section" class=" w-full flex flex-wrap mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 b">
+    <div class="relative px-6 lg:px-8 sxs:mt-40">
       <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
         <div>
           <div class="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -147,7 +86,8 @@
                 Download CV
                 <span class="text-indigo-200" aria-hidden="true">&rarr;</span>
               </a>
-              <a href="#"
+              <a target="_blank" title="send email"
+              href="<%- links.email %>"
                 class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 Contact
                 <span class="text-gray-400" aria-hidden="true">&rarr;</span>
@@ -157,30 +97,15 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40 rounded-full">
-      <img class=" w-80 h-80 rounded-full" src="./public/img/profileImg1.png" alt="profile image" />
+    <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+      <img class=" w-80 h-80 rounded-full" src="./img/profileImg1.png" alt="profile image" />
     </div>
-    <!-- <div
-      class="absolute inset-x-0 top-[calc(100%-43rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-      <svg
-        class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
-        viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
-          d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
-        <defs>
-          <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645"
-            gradientUnits="userSpaceOnUse">
-            
-            <stop offset="1" stop-color="#FF80B5"></stop>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div> -->
   </section>
   <!-- jumbo end -->
 
 
-  <section id="education-section" class="relative overflow-hidden bg-white shadow sm:rounded-lg sm:pt-40 sm:pb-40 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-3">
+  <section id="education-section"
+    class="relative overflow-hidden shadow sm:rounded-lg sm:pt-40 sm:pb-40 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-3">
     <div class="">
       <h1 class="text-2xl font-bold tracking-tight sm:text-left sm:text-6xl sm:pb-16">Education</h1>
     </div>
@@ -188,8 +113,8 @@
       <% educations.forEach(function(education){%>
         <div class="px-4 py-5 sm:px-6  flex-1  sm:flex-2 md:flex-3">
           <div class="flex align-center border-gray-500">
-            <div class="flex-none w-16 h-16 mr-4 inline-flex justify-center align-center ">
-              <img src=<%- education.img %> alt=<%- education.college %>/>
+            <div class="flex-none w-16 h-16 mr-4 inline-flex justify-center align-center shadow rounded-full">
+              <img class="p-3" src=<%- education.img %> alt=<%- education.college %>/>
             </div>
             <h2 class="text-lg font-medium leading-6 text-gray-900 text-left w-60 inline-flex items-center">
               <%- education.title %>
@@ -212,17 +137,18 @@
         <% }) %>
     </div>
   </section>
-<!-- experiences section -->
-  <section id="experience-section" class="overflow-hidden bg-white shadow sm:rounded-lg  sm:pt-40 sm:pb-40 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-3  bg-gray-100">
-    <div >
+  <!-- experiences section -->
+  <section id="experience-section"
+    class="overflow-hidden  shadow sm:rounded-lg  sm:pt-40 sm:pb-40 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-3  ">
+    <div>
       <h1 class="text-2xl font-bold tracking-tight sm:text-left sm:text-6xl  sm:pb-16">Experience</h1>
     </div>
     <div class="flex flex-wrap justify-between ">
       <% experiences.forEach(function(experience){%>
         <div class="px-4 py-5 sm:px-6 flex-1  sm:flex-2 md:flex-3">
           <div class="flex  align-center border-gray-500">
-            <div class="flex-none w-16 h-16 mr-4 inline-flex justify-center items-center ">
-              <img src=<%- experience.img %> alt=<%- experience.company %>/>
+            <div class="flex-none w-16 h-16 mr-4 inline-flex justify-center items-center shadow rounded-full">
+              <img  class="p-3"  src=<%- experience.img %> alt=<%- experience.company %>/>
             </div>
             <h2 class="text-lg font-medium leading-6 text-gray-900  text-left w-60  inline-flex  items-center">
               <%- experience.title %>
@@ -245,70 +171,56 @@
   </section>
   <!-- experience section end -->
 
-    <!--  -->
-    <section id="other-section" class="relative overflow-hidden bg-white shadow sm:rounded-lg sm:pt-40 sm:pb-40 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-3  bg-gray-20">
-        <div>
-          <h1 class="text-2xl font-bold tracking-tight sm:text-left sm:text-6xl sm:pb-16">Other Information</h1>
-        </div>
-      <div class="flex  flex-wrap justify-between">
-        <% othersInfo.forEach(function(item){%>
-        <div class="px-4 py-5 sm:px-6  flex-1  sm:flex-2 md:flex-3 ">
-          <h1 class="sm:text-2xl sm:pb-8" ><%- item.title %></h1>
+  <!--  -->
+  <section id="other-section"
+    class="relative overflow-hidden shadow sm:rounded-lg sm:pt-40 sm:pb-40 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-3  bg-gray-20">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight sm:text-left sm:text-6xl sm:pb-16">Other Information</h1>
+    </div>
+    <div class="flex  flex-wrap justify-between">
+      <% othersInfo.forEach(function(item){%>
+        <div class="px-4 py-5 sm:px-6  flex-1  sm:flex-2 md:flex-3  ">
+          <h1 class="sm:text-2xl sm:pb-8">
+            <%- item.title %>
+          </h1>
           <div>
             <ul>
-        <% item.data.forEach(function(info){%>
-            <li>
-            - <%- info.title %>
-            </li>
-          <% })%>
-        </ul>
+              <% item.data.forEach(function(info){%>
+                <li>
+                  - <%- info.title %>
+                </li>
+                <% })%>
+            </ul>
           </div>
         </div>
         <% })%>
     </div>
 
-      </section>
-    <!--  -->
+  </section>
+  <!--  -->
 
   <!-- contact section -->
-  <section id="contact-section" class="overflow-hidden bg-white shadow sm:rounded-lg  sm:pt-40 sm:pb-40 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-3  bg-gray-20">
-    <div >
-      <h1 class="text-2xl font-bold tracking-tight sm:text-left sm:text-6xl  sm:pb-16">Contact</h1>
-    </div>
-    <div class="flex flex-1 flex-wrap justify-center items-center">
-      
-      <form class="w-full sm:w-1/2 " action="#" method="POST">
-        <div class="shadow sm:overflow-hidden sm:rounded-md">
-          <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-          <h2 class="text-2xl font-bold tracking-tight sm:text-left sm:text-2xl  sm:pb-4">Send a message</h2>
-          </div>
-          <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
-            <div class="grid grid-cols-3 gap-6">
-              <div class="col-span-3 sm:col-span-2">
-                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <div class="mt-1 flex rounded-md shadow-sm">
-                  <input type="email" name="email" id="email"
-                    class="p-2 block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    placeholder="www.example.com">
-                </div>
-              </div>
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-              <div class="mt-1">
-                <textarea id="message" name="message" rows="3"
-                  class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  placeholder="write your message here......"></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-            <button type="submit"
-              class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
-          </div>
-        </div>
-      </form>
-    </div>
+  <section class="flex flex-col items-center px-5 py-16 bg-blue-extralight">
+    <h2 class="mb-6 font-medium text-3xl sxs:text-[32px] leading-9.5 tracking-wider text-grey-blue select-none ">Contact
+      me</h2>
+    <a target="_blank" title="send email"
+      class="text-lg leading-5.25  xs:w-60 h-16 flex space-x-6 justify-center items-center mb-3 bg-white rounded-lg hover:shadow-lg active:border-2 active:border-blue-light w-60"
+      href="<%- links.email %>">
+      <svg class="w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 18">
+        <path fill="#000" class="fill-blue-middle"
+          d="M29.333.333H12A2.674 2.674 0 0 0 9.333 3v12A2.667 2.667 0 0 0 12 17.667h17.333A2.657 2.657 0 0 0 32 15V3A2.667 2.667 0 0 0 29.333.333zm0 4.894-8.666 4.44L12 5.227V3l8.667 4.413L29.333 3v2.227zM6.667 15c0 .227.04.44.066.667h-5.4c-.736 0-1.333-.6-1.333-1.333C0 13.6.597 13 1.333 13h5.334v2zM4 2.334h2.733c-.026.226-.066.44-.066.666v2H4c-.733 0-1.333-.6-1.333-1.333S3.267 2.334 4 2.334zM1.333 9c0-.733.6-1.333 1.334-1.333h4v2.667h-4c-.734 0-1.334-.6-1.334-1.334z" />
+      </svg>
+      <span class="select-none">Send Email</span>
+    </a>
+    <a target="_blank" title="my linkedIn profile"
+      class="text-lg leading-5.25 w-full xs:w-83.75 h-16 flex space-x-6 justify-center items-center mb-3 bg-white rounded-lg hover:shadow-lg active:border-2 active:border-blue-light w-60"
+      href="<%- links.linkedin %>">
+      <svg class="w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+        <path fill="#0A66C2"
+          d="M27.265 27.266h-4.74v-7.425c0-1.771-.032-4.05-2.467-4.05-2.47 0-2.847 1.929-2.847 3.92v7.555H12.47v-15.27h4.551v2.087h.064a4.988 4.988 0 0 1 4.49-2.467c4.806 0 5.692 3.161 5.692 7.273l-.002 8.377zM7.12 9.909a2.752 2.752 0 1 1 0-5.503 2.752 2.752 0 0 1 0 5.503zm2.37 17.357H4.744v-15.27H9.49v15.27zM29.63.002H2.36A2.335 2.335 0 0 0 0 2.31v27.38A2.337 2.337 0 0 0 2.361 32H29.63A2.342 2.342 0 0 0 32 29.69V2.308A2.34 2.34 0 0 0 29.63 0" />
+      </svg>
+      <span class="select-none">LinkedIn</span>
+    </a>
   </section>
   <!-- contact section end -->
 

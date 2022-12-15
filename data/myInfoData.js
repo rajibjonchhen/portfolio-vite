@@ -1,4 +1,4 @@
-// import ProfileImg from "../public/img/profileImg1.png"
+// import ProfileImg from "../img/profileImg1.png"
 export default function myInfoData() {
     return {
     name:"Rita Vaidya",

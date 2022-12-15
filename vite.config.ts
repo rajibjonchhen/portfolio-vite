@@ -1,15 +1,16 @@
-import * as fs from 'fs'
-import  { resolve } from 'path'
-import { defineConfig } from 'vite'
-import { createHtmlPlugin } from 'vite-plugin-html'
-import viteCompression from 'vite-plugin-compression'
-import educationData from './data/educationData'
-import experienceData from './data/experienceData'
-import { interpersonalSkillsData, itSkillsData } from './data/skillsData'
-import myInfoData from './data/myInfoData'
-import interestsData from './data/interestData'
-import trainingsData from './data/trainingsData'
-import languagesData from './data/languagesData'
+import * as fs from 'fs';
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import viteCompression from 'vite-plugin-compression';
+import { createHtmlPlugin } from 'vite-plugin-html';
+
+import educationData from './data/educationData';
+import experienceData from './data/experienceData';
+import interestsData from './data/interestData';
+import languagesData from './data/languagesData';
+import myInfoData from './data/myInfoData';
+import { interpersonalSkillsData } from './data/skillsData';
+import trainingsData from './data/trainingsData';
 
 const getLogo = (name) => {
     const path = `./src/img/logo/${name}.svg`;
@@ -19,13 +20,16 @@ const getLogo = (name) => {
 const getAvatar = (name) => `./src/img/avatars/${name}.png`
 
 export default defineConfig({
+    base: process.env.NODE_ENV === "production"? "":"/",
+    publicDir:'public',
     build: {
       rollupOptions: {
         input: {
           index: resolve(__dirname, 'index.html'),
-        }
-      }
-    },
+          style:resolve(__dirname, 'style.css')
+        },
+    }
+},
     plugins: [
         createHtmlPlugin({
             minify: true,
@@ -45,7 +49,7 @@ export default defineConfig({
                         },
                         links: {
                             email: 'mailto:hkrs.vaidya@gmail.com',
-                            linkedin: 'https://www.linkedin.com/company/rita-vaidya',
+                            linkedin: 'https://www.linkedin.com/in/rita-vaidya',
                         },
                         myInfo:myInfoData(),
                         educations: educationData(),
