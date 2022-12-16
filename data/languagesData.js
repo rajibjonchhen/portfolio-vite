@@ -10,6 +10,18 @@ return[
         stars:8,
     },
     {
+        title:"Nepali",
+        // flag:<ReactCountryFlag countryCode="NP" />,
+        level:"Native or Bilingual Proficiency",
+        stars:10,
+    },
+    {
+        title:"Hindi",
+        // flag:<ReactCountryFlag countryCode="IN" />,
+        level:"Native or Bilingual Proficiency",
+        stars:10,
+    },
+    {
         title:"Danish",
         // flag:<ReactCountryFlag countryCode="DK" />,
         level:"Limited Working Proficiency",
@@ -21,17 +33,5 @@ return[
         level:"Beginner",
         stars:2,
     },
-    {
-        title:"Nepali",
-        // flag:<ReactCountryFlag countryCode="NP" />,
-        level:"Native or Bilingual Proficiency",
-        stars:10,
-    },
-    {
-        title:"Hindi",
-        // flag:<ReactCountryFlag countryCode="IN" />,
-        level:"Native or Bilingual Proficiency",
-        stars:10,
-    }
 ]
 }

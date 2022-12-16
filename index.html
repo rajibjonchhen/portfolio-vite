@@ -63,11 +63,11 @@
   <!-- jumbo start -->
   <section id="intro-section" class=" w-full flex flex-wrap mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 b">
     <div class="relative px-6 lg:px-8 sxs:mt-40">
-      <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+      <div class="mx-auto max-w-3xl pt-32 pb-32 sm:pt-48 sm:pb-40">
         <div>
           <div class="hidden sm:mb-8 sm:flex sm:justify-center">
             <div
-              class="relative overflow-hidden rounded-full py-1.5 px-4 text-md leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 ">
+              class="relative overflow-hidden rounded-full py-4 px-4 text-md leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 ">
               <span class="text-gray-600">
                 <%- myInfo.title %>
               </span>
@@ -182,14 +182,22 @@
     <div class="flex  flex-wrap justify-between">
       <% othersInfo.forEach(function(item){%>
         <div class="px-4 py-5 sm:px-6  flex-1  sm:flex-2 md:flex-3  ">
-          <h1 class="sm:text-2xl sm:pb-8">
-            <%- item.title %>
-          </h1>
+          <h2 class="text-lg font-medium leading-6 text-gray-900  text-left w-60  inline-flex  items-center">
+            <span class="flex-none w-16 h-16 mr-4 inline-flex justify-center items-center shadow rounded-full">
+            <img class="p-4" src= "<%- item.icon %>" alt="" /> 
+           </span>
+           <%- item.title %>
+          </h2>
           <div>
             <ul>
               <% item.data.forEach(function(info){%>
-                <li>
-                  - <%- info.title %>
+                <li class="flex items-center">
+                  <span class="mr-2">
+                    <img class=" w-4  h-4" src="/img/listStyle.svg"   alt=""/>
+                  </span>
+                  <span>
+                    <%- info.title %>
+                </span>
                 </li>
                 <% })%>
             </ul>

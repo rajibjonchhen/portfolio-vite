@@ -56,11 +56,14 @@ export default defineConfig({
                         experiences: experienceData(),
                         trainingsData:trainingsData(),
                         othersInfo:[
-                            {title:"Interest",
+                            {   icon:"/img/interest.svg",
+                                title:"Interest",
                             data:interestsData()},
-                            {title:"Languages",
+                            {   icon:"/img/language.svg",
+                                title:"Languages",
                             data:languagesData()},
-                            {title:"Skills",
+                            {   icon:"/img/ninjaskill.svg",
+                                title:"Skills",
                             data:interpersonalSkillsData()},
                         ]
                     },
