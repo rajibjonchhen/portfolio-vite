@@ -115,8 +115,8 @@
       <% educations.forEach(function(education){%>
         <div class="px-4 py-5 sm:px-6  flex-1  sm:flex-2 md:flex-3">
           <div class="flex align-center border-gray-500">
-            <div class="flex-none w-16 h-16 mr-4 inline-flex justify-center align-center shadow rounded-full">
-              <img class="p-3" src=<%- education.img %> alt=<%- education.college %>/>
+            <div class="flex-none w-12 h-12 mr-4 inline-flex justify-center align-center shadow rounded-full">
+              <img class="p-2" src=<%- education.img %> alt=<%- education.college %>/>
             </div>
             <h2 class="text-lg font-medium leading-6 text-gray-900 text-left w-60 inline-flex items-center">
               <%- education.title %>
@@ -130,11 +130,15 @@
           <p class="mt-1 max-w-2xl text-sm text-gray-500">
             <%- education.startDate %> - <%- education.endDate %>
           </p>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500">
-            <% education.courses.forEach(function(course) { %>
-              - <%- course %>.<br />
+          <% education.courses.forEach(function(course) { %>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500 flex">
+              <span class="bullet-point">
+              </span>
+              <span>
+              <%- course %>.<br />
+            </span>
+            </p>
                 <% }) %>
-          </p>
         </div>
         <% }) %>
     </div>
@@ -150,7 +154,7 @@
         <div class="px-4 py-5 sm:px-6 flex-1  sm:flex-2 md:flex-3">
           <div class="flex  align-center border-gray-500">
             <div class="flex-none w-12 h-12 mr-4 inline-flex justify-center items-center shadow rounded-full">
-              <img  class="w-full p-2"  src=<%- experience.img %> alt=<%- experience.company %>/>
+              <img  class="p-2"  src=<%- experience.img %> alt=<%- experience.company %>/>
             </div>
             <h2 class="text-lg font-medium leading-6 text-gray-900  text-left w-60  inline-flex  items-center">
               <%- experience.title %>
@@ -162,11 +166,16 @@
           <p class="mt-1 max-w-2xl text-sm text-gray-500">
             <%- experience.startDate %> - <%- experience.endDate %>
           </p>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500">
-            <% experience.tasks.forEach(function(task) { %>
-              - <%- task %>.<br />
+          <% experience.tasks.forEach(function(task) { %>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500 flex">
+              <span class="bullet-point">
+              </span>
+              
+              <span>
+                <%- task %>.<br />
+              </span>
+            </p>
                 <% }) %>
-          </p>
         </div>
         <% }) %>
     </div>
