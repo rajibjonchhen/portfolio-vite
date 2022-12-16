@@ -4,7 +4,7 @@ export default function interestsData (){
     description:"Love to travel around the world. So far travelled 18 countries in asia and europe",
     img:"https://res.cloudinary.com/dai5duzoj/image/upload/v1657122919/portfolio/Screenshot_2022-07-06_at_16.55.06_ep1ehu.png"    
 },
-    {title:"Learning more about other language and culture",
+    {title:"Learning other language and culture",
     description:"During my education and work in Denmark got chance to work with multicultural people. I am looking forward to work in a diverse environment get the opportunity to learn about world",
     img:'https://res.cloudinary.com/dai5duzoj/image/upload/v1657122284/portfolio/Screenshot_2022-07-06_at_16.29.50_oigrx4.png'    
 },
