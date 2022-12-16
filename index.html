@@ -149,8 +149,8 @@
       <% experiences.forEach(function(experience){%>
         <div class="px-4 py-5 sm:px-6 flex-1  sm:flex-2 md:flex-3">
           <div class="flex  align-center border-gray-500">
-            <div class="flex-none w-16 h-16 mr-4 inline-flex justify-center items-center shadow rounded-full">
-              <img  class="p-3"  src=<%- experience.img %> alt=<%- experience.company %>/>
+            <div class="flex-none w-12 h-12 mr-4 inline-flex justify-center items-center shadow rounded-full">
+              <img  class="w-full p-2"  src=<%- experience.img %> alt=<%- experience.company %>/>
             </div>
             <h2 class="text-lg font-medium leading-6 text-gray-900  text-left w-60  inline-flex  items-center">
               <%- experience.title %>
@@ -183,13 +183,13 @@
       <% othersInfo.forEach(function(item){%>
         <div class="px-4 py-5 sm:px-6  flex-1  sm:flex-2 md:flex-3  ">
           <h2 class="text-lg font-medium leading-6 text-gray-900  text-left w-60  inline-flex  items-center">
-            <span class="flex-none w-16 h-16 mr-4 inline-flex justify-center items-center shadow rounded-full">
-            <img class="p-4" src= "<%- item.icon %>" alt="" /> 
+            <span class="flex-none w-12 h-12 mr-4 inline-flex justify-center items-center shadow rounded-full">
+            <img class="p-3" src= "<%- item.icon %>" alt="" /> 
            </span>
            <%- item.title %>
           </h2>
           <div>
-            <ul>
+            <ul class="ml-14">
               <% item.data.forEach(function(info){%>
                 <li class="flex items-center">
                   <span class="mr-2">
