@@ -19,7 +19,7 @@
 //     mobileMenu.classList.toggle("hidden")
 // }
 
-const bulletPoint = document.getElementsByClassName("bullet-point")
+const bulletPoint = document.getElementsByClassName ("bullet-point")
 console.log("bulletPoint",bulletPoint)
 
 for(let i = 0; i < bulletPoint.length; i++){
